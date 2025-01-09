@@ -1,0 +1,84 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ed7318, #ffffff); /* Fondo naranja y blanco */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Logo de Netflix */
+.netflix-logo {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+/* Botón del producto */
+.product-button {
+    padding: 15px 30px;
+    background-color: #ed7318; /* Fondo naranja */
+    color: #ffffff; /* Letras blancas */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-button:hover {
+    background-color: #d65f12; /* Fondo al pasar el mouse */
+}
+
+/* Contenedor del formulario */
+.form-container {
+    display: none; /* Ocultar el formulario inicialmente */
+    text-align: left;
+    margin-top: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #ed7318; /* Fondo naranja */
+    color: #ffffff; /* Letras blancas */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #d65f12; /* Fondo al pasar el mouse */
+}
+
+/* Descripción de la compra */
+#descripcion-compra {
+    margin-top: 10px;
+    font-weight: bold;
+}
+

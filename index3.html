@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Cuenta Netflix</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a tu archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>Compra Cuenta Netflix</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Logo de Netflix" class="netflix-logo">
+        <button class="product-button" onclick="mostrarFormulario()">CUENTA NETFLIX</button>
+        <div class="form-container" id="form-container">
+            <h2>Opciones de Compra</h2>
+            <form id="compra-form" onsubmit="enviarCompra(event)">
+                <label for="opcion">Elige una opción:</label>
+                <select id="opcion" name="opcion" onchange="actualizarDescripcion()" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Pantalla 170 BS">Precio: Pantalla 170 BS</option>
+                    <option value="Cuenta Completa 850 BS">Precio: Cuenta Completa 850 BS</option>
+                </select>
+                <br>
+                <div id="descripcion-compra"></div>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <br>
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+                <br>
+                <button type="submit" class="submit-button">Comprar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function mostrarFormulario() {
+            document.getElementById('form-container').style.display = 'block';
+        }
+
+        function actualizarDescripcion() {
+            const opcion = document.getElementById('opcion').value;
+            const descripcionCompra = document.getElementById('descripcion-compra');
+            if (opcion === "Pantalla 170 BS") {
+                descripcionCompra.innerHTML = `Has seleccionado: Ahora disfrutarás de una pantalla Netflix y el mejor contenido. Recuerda usar en un solo dispositivo. Precio: 170 BS.`;
+            } else if (opcion === "Cuenta Completa 850 BS") {
+                descripcionCompra.innerHTML = `Has seleccionado: Ahora disfrutarás de una cuenta completa de Netflix y el mejor contenido. Recuerda usar en un solo dispositivo. Precio: 850 BS.`;
+            } else {
+                descripcionCompra.innerHTML = "";
+            }
+        }
+
+        function enviarCompra(event) {
+            event.preventDefault();
+            const opcion = document.getElementById('opcion').value;
+            const telefono = document.getElementById('telefono').value;
+            const correo = document.getElementById('correo').value;
+            const mensaje = `Opción: ${opcion}\nTeléfono: ${telefono}\nCorreo: ${correo}`;
+            alert('Gracias por su compra. Vuelva pronto');
+            window.location.href = `mailto:argel0855@gmail.com?subject=Compra Cuenta Netflix&body=${encodeURIComponent(mensaje)}`;
+        }
+    </script>
+</body>
+</html>
+
+
